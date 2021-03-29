@@ -383,7 +383,7 @@ class EC2():
         "Stops instance `inst`"
         self.get_instance(inst).stop()
 
-    def connect(self, inst, ports=None, user=None, keyfile='~/.ssh/id_rsa'):
+    def connect(self, inst, ports=None, user=None, keyfile='~/default.pem'):
         """Replace python process with an ssh process connected to instance `inst`;
         use `user@name` otherwise defaults to user 'ubuntu'. `ports` (int or list) creates tunnels"""
         if user is None:
